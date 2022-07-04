@@ -1,3 +1,4 @@
+import environ
 from django.shortcuts import render
 from newsapi import NewsApiClient
 
@@ -5,7 +6,9 @@ from newsapi import NewsApiClient
 
 def index(request):
     
-    NewsApi=NewsApiClient(api_key='63bd5808cfce4606bce27c2f5af5cf36')
+    env = environ.Env()
+    environ.Env.read_env()
+    NewsApi=NewsApiClient(api_key=env('API_KEY'))
     top=NewsApi.get_top_headlines(sources='the-verge')
     
     latest_news=top['articles']
