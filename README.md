@@ -1,2 +1,2 @@
 # Django-news
-Simple News app
+Simple News app for creating docker file
