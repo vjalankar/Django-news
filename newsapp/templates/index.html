@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>News padh lo bhai </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      
+
+    </head>
+    <body style="background:white; color:black;" class="white">
+        
+        <div class="container">
+
+
+<br>
+<br>
+<br>
+<br>
+
+<h1 class="h1 text-left" > Top Headlines </h1>
+<hr style="color:white">
+
+<br>
+
+            <div class="row" >     
+
+                
+               
+                {% for new,desc,img in mylist  %}
+           
+
+        <div class="col-sm-4 " style="padding:30px" >
+
+               
+            <div class="shadow"  style="padding:30px">
+                
+                <img src="{{ img }}" class="img-reponsive" height="119px" alt="not avilable right now" />
+                
+                {{ value|linebreaks }}
+                
+                
+                <h1 class='h3'> {{new}} </h1>
+                
+                {{ value|linebreaks }}
+                
+                <p class="" > {{desc}}  </p> 
+                
+                {{ value|linebreaks }}
+                
+     
+               
+                </div>
+           
+          
+            
+        </div>
+
+        <br>
+    {% endfor%}
+   
+    </div> 
+
+    {% comment %} row closed {% endcomment %}
+        
+
+    </div>
+    {% comment %} </div> container div closed {% endcomment %}
+    
+       
+    </body>
+</html>
